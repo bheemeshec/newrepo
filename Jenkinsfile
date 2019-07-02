@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                mvn compile
+                /var/lib/jenkins/apache-maven-3.6.1/mvn compile
             }
         }
         stage('Test') {
             steps {
-                mvn clean test
+                echo "mvn clean test"
             }
         }
         stage('package') {
             steps {
-                mvn clean package
+                echo "mvn clean package"
             }
         }
     }
